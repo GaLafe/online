@@ -706,7 +706,7 @@ function gd_loadfile(fileId,mresp){
 					}
 					gd_isdownloading=true;
 					_getid("downlink").innerHTML="<table><tr><td><img src='wait.gif' align='absmiddle'><td><div id='gd_progress'>Установка...</div><td>&nbsp; <a href='#' id='gd_cancel' style='font-size:15px;display:none'>Cancel</a></table>";
-					/*if(resp.downloadUrl){
+					if(resp.downloadUrl){
 						s=resp.downloadUrl+'&access_token='+encodeURIComponent(accessToken);		
 						s=s.replace('e=download&gd=true&','');
 						console.log(s);
@@ -714,14 +714,14 @@ function gd_loadfile(fileId,mresp){
 						var a=_getid('codearea');
 						a.innerHTML=s;
 						return;
-					}*/
-					/*if(resp.webContentLink){
+					}
+					if(resp.webContentLink){
 						setTimeout(function(){
 							end();
 							setdown(resp.webContentLink);
 						},300);
 						return;
-					}*/
+					}
 					var xhr = new XMLHttpRequest();
 					var c=_getid('gd_cancel');
 					if(c){
