@@ -65,7 +65,7 @@ a.newsmenu:hover{text-decoration:underline;}
 var gadb=false;
 function setstorage(name,value){
 	if (window.localStorage){
-		localStorage[name]=value+'';
+		localStorage[name]=value+''; 
 	}else{
 		//setCookie(name, value, 1000*60*60*24*365*10); 
 	}
@@ -706,7 +706,7 @@ function gd_loadfile(fileId,mresp){
 					}
 					gd_isdownloading=true;
 					_getid("downlink").innerHTML="<table><tr><td><img src='wait.gif' align='absmiddle'><td><div id='gd_progress'>Установка...</div><td>&nbsp; <a href='#' id='gd_cancel' style='font-size:15px;display:none'>Cancel</a></table>";
-					if(resp.downloadUrl){
+					/*if(resp.downloadUrl){
 						s=resp.downloadUrl+'&access_token='+encodeURIComponent(accessToken);		
 						s=s.replace('e=download&gd=true&','');
 						console.log(s);
@@ -714,8 +714,8 @@ function gd_loadfile(fileId,mresp){
 						var a=_getid('codearea');
 						a.innerHTML=s;
 						return;
-					}
-					if(resp.webContentLink){
+					}*/
+					/*if(resp.webContentLink){
 						setTimeout(function(){
 							end();
 							setdown(resp.webContentLink);
@@ -758,7 +758,7 @@ function gd_loadfile(fileId,mresp){
 							}else{
 								var blob = this.response;								
 							}
-							var blob = new Blob([this.response], {type: resp.mimeType || 'application/x-shockwave-flash'});
+							/*var blob = new Blob([this.response], {type: resp.mimeType || 'application/x-shockwave-flash'});
 							var reader = new FileReader();
 						    reader.onload = function(e) {
 								var returnedURL = e.target.result;
@@ -768,8 +768,8 @@ function gd_loadfile(fileId,mresp){
 								a.innerHTML=s;
 						    }
 							reader.readAsDataURL(blob);
-							return;
-							if(gd_bloburl){
+							return;*/
+							/*if(gd_bloburl){
 								window.URL.revokeObjectURL(gd_bloburl);
 								gd_bloburl='';
 							}*/
